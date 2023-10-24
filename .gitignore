@@ -1,0 +1,6 @@
+.sonar
+.scannerwork
+.idea
+*Zone.Identifier
+app/config/jwt/
+etc/docker/runtime/

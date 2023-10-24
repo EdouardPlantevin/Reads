@@ -1,0 +1,114 @@
+Controller:
+  Admin:
+    UsersController:
+      index:
+        voir_user: View user information
+        modif_user: Modify user
+        titleConfirmationDelete: Delete a user
+        textConfirmationDelete: Do you want to delete the user?
+        compteActive: Account activated
+        compteDesactive: Disabled account
+      newUser: 
+        user_created_success: <strong>The account is not activated</strong>, the user received an activation link on their email
+      editProfile:
+        user_edited_success: The user has been updated!
+        page_title_edit_user: Modification of a user
+      delete: 
+        delete_user: The account has been successfully deleted.
+  Dashboard: 
+      ProfileController: 
+        index: 
+          profil_error: Login to access your profile!
+  Publics:
+    DefaultController:
+      demoTraduction:
+        langText: The language of the page is currently in ENGLISH
+    ProductController:
+      datatable1:
+        default_search_placeholder: Select the type of search
+      formatResultForDataTable:
+        voir_produit: See the product
+      exportAllProdutXLS:
+        error_xls_product: The export could not be completed. No product registered.
+    RegistrationController:
+      verifyUser:
+        flash_success: User activated
+        token_invalide: Token is invalid or expired
+    SecurityController:
+      forgottenPassword:
+        success_email: Email sent successfully
+        error_email: A problem has occurred
+      resetPass:
+        success_reset: Password changed successfully
+        error_token: Single use link expired, please try again
+Form:
+  RegistrationFormType:
+    buildForm:
+      email:
+        label: Email
+      agree: You must agree to our terms.
+      agreeTerms:
+        label: Accept terms and conditions 
+      lastname:
+        label: Name
+      firstname:
+        label: Firstname
+      invalid_message: The passwords do not match, please try again.
+      enter_pwd: Please enter a password
+      limit_pwd: "Your password must be at least {{ limit }} characters long and contain at least one number, one lowercase letter, one uppercase letter and one special character (special characters accepted are: _-@$*+%#)"
+      pwd: 
+        label: Password 
+      confirm_pwd:
+        label: Confirm password
+  ResetPasswordFormType:
+    buildForm:
+      password:
+        label: Enter your password
+  ResetPasswordRequestFormType:
+    buildForm:
+      email:
+        label: Enter your email
+        placeholder: exemple@email.fr
+        blank: Please enter your email address.
+        email: The email address is invalid.
+  SearchDatatableType:
+    buildForm:
+      searchValue:
+        label: Search
+        placeholder: Category, product, description...
+      10-results: 10 results per page
+      25-results: 25 results per page
+      50-results: 50 results per page
+      75-results: 75 results per page
+      100-results: 100 results per page
+      submit: 
+        label: Search
+  UserEditType:
+    buildForm:
+      lastname:
+        label: Lastname
+      firstname: 
+        label: Firstname
+      roles:
+        label: Roles
+      activeAccount:
+        label: Activate the account
+      submit:
+        label: Edit user account
+Service:
+  MailerService:
+    sendActivationEmail:
+      object_email_activation_account: Activation of your account on the Symfony starterkit website
+    sendResetPwdEmail:
+      object_email_reset_pwd: Reset password
+Twig:
+Validator:
+  EmailValidator:
+    validate:
+      message_constraint: This email address is already used by another account, please try again.
+  IdentifiantValidator:
+    validate:
+      message_constraint: This username is already in use by another account, please try again.
+  PasswordValidator:
+    validate:
+      message_constraint: "Your password must be at least 14 characters long and contain at least one number, one lowercase letter, one uppercase letter and one special character (special characters accepted are: _-@$*+%#)"

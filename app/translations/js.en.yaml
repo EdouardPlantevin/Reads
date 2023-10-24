@@ -1,0 +1,14 @@
+testPrefix:
+  testKey: LE LOG EN ANGLAIS, test des traductions js
+datatable:
+  previous: Previous
+  next: Next
+  first: First
+  last: Last
+  processing: Processing in progress...
+  loadingRecords: Loading in progress...
+  zeroRecords: No results
+  emptyTable: No data available in the table
+  placeholderSearchOnCol: Please select your search type first
+  recherche: Enter your search
+  

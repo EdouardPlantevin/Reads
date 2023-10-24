@@ -1,0 +1,14 @@
+testPrefix:
+  testKey: LE LOG EN FRANCAIS, test des traductions js
+datatable:
+  previous: Précédent
+  next: Suivant
+  first: Premier
+  last: Dernier
+  processing: Traitement en cours...
+  loadingRecords: Chargement en cours...
+  zeroRecords: Aucun résultat
+  emptyTable: Aucune donnée disponible dans le tableau
+  placeholderSearchOnCol: Veuillez d'abord sélectionner votre type de recherche
+  recherche: Saisir votre recherche
+  

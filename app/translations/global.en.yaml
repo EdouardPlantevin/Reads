@@ -1,0 +1,9 @@
+tradGlobal: Test traduction global EN
+fields:
+  product:
+    idProduit: Product ID
+    categorie: Category
+    nomProduit: Product Name
+    description: Description
+    prix: Price
+    dateDeCreation: Date of creation 

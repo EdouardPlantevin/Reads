@@ -1,0 +1,114 @@
+Controller:
+  Admin:
+    UsersController:
+      index:
+        voir_user: Voir les informations de l'utilisateur
+        modif_user: Modification de l'utilisateur
+        titleConfirmationDelete: Suppression d'un utilisateur
+        textConfirmationDelete: Souhaitez-vous supprimer l'utilisateur ?
+        compteActive: Compte activé
+        compteDesactive: Compte désactivé
+      newUser: 
+        user_created_success: <strong>Le compte n'est pas activé</strong>, l'utilisateur a reçu un lien d'activation sur son e-mail
+      editProfile:
+        user_edited_success: L'utilisateur a été mis à jour !
+        page_title_edit_user: Modification d'un utilisateur
+      delete: 
+        delete_user: Le compte a été supprimé avec succès. 
+  Dashboard: 
+    ProfileController: 
+      index: 
+        profil_error: Connectez-vous pour accéder à votre profil !
+  Publics:
+    DefaultController:
+      demoTraduction:
+        langText: "La langue de la page est actuellement en FRANCAIS"
+    ProductController:
+      datatable1:
+        default_search_placeholder: Sélectionner le type de recherche
+      formatResultForDataTable:
+        voir_produit: Voir le produit
+      exportAllProdutXLS:
+        error_xls_product: L'export n'a pas pu s'effectuer. Aucun produit enregistré.
+    RegistrationController:
+      verifyUser:
+        flash_success: Utilisateur activé
+        token_invalide: Le token est invalide ou a expiré
+    SecurityController:
+      forgottenPassword:
+        success_email: Email envoyé avec succès
+        error_email: Un problème est survenu
+      resetPass:
+        success_reset: Mot de passe changé avec succès
+        error_token: Validité du lien à usage unique dépassée, veuillez réessayer
+Form:
+  RegistrationFormType:
+    buildForm:
+      email:
+        label: Email
+      agree: Vous devez accepter nos conditions.
+      agreeTerms:
+        label: Accepter les conditions 
+      lastname:
+        label: Nom
+      firstname:
+        label: Prénom
+      invalid_message: Les mots de passe ne correspondent pas, veuillez réessayer.
+      enter_pwd: Veuillez saisir un mot de passe
+      limit_pwd: "Votre mot de passe doit contenir au moins {{ limit }} caractères et comporter au moins un chiffre, une lettre minuscule, une lettre majuscule et un caractère spécial (les caractères spéciaux acceptés sont : _-@$*+%#)"
+      pwd: 
+        label: Mot de passe 
+      confirm_pwd:
+        label: Confirmer le mot de passe
+  ResetPasswordFormType:
+    buildForm:
+      password:
+        label: Entrez votre mot de passe
+  ResetPasswordRequestFormType:
+    buildForm:
+      email:
+        label: Entrez votre e-mail
+        placeholder: exemple@email.fr
+        blank: 'Veuillez renseigner votre adresse e-mail.'
+        email: 'L''adresse e-mail est invalide.'
+  SearchDatatableType:
+    buildForm:
+      searchValue:
+        label: Recherche
+        placeholder: Catégorie, produit, description...
+      10-results: 10 résultats par page
+      25-results: 25 résultats par page
+      50-results: 50 résultats par page
+      75-results: 75 résultats par page
+      100-results: 100 résultats par page
+      submit: 
+        label: Rechercher
+  UserEditType:
+    buildForm:
+      lastname:
+        label: Nom
+      firstname: 
+        label: Prénom
+      roles:
+        label: Rôles
+      activeAccount:
+        label: Activer le compte
+      submit:
+        label: Modifier compte utilisateur
+Service:
+  MailerService:
+    sendActivationEmail:
+      object_email_activation_account: Activation de votre compte sur le site starterkit Symfony
+    sendResetPwdEmail:
+      object_email_reset_pwd: Réinitialisation de mot de passe
+Twig:
+Validator:
+  EmailValidator:
+    validate:
+      message_constraint: Cette adresse e-mail est déjà utilisée par un autre compte, veuillez réessayer.
+  IdentifiantValidator:
+    validate:
+      message_constraint: Cet identifiant est déjà utilisé par un autre compte, veuillez réessayer.
+  PasswordValidator:
+    validate:
+      message_constraint: "Votre mot de passe doit contenir au moins 14 caractères et comporter au moins un chiffre, une lettre minuscule, une lettre majuscule et un caractère spécial (les caractères spéciaux acceptés sont : _-@$*+%#)"

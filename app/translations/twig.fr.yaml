@@ -1,0 +1,198 @@
+base:
+  base-neutre:
+    title: Bienvenue !
+  base-error:
+    back_dash_board: Retour au tableau de bord
+  base-email:
+    intro: Bonjour
+    goodbye: À bientôt,
+    signature: L'équipe Eurelis
+  base:
+    welcome: Bienvenue !
+    loading: Chargement...
+    compte_non_active: <strong>Votre compte n'est pas activé</strong>, vous avez reçu un lien d'activation sur votre e-mail
+bundles:
+  TwigBundle:
+    Exception:
+    ArtgrisMaintenanceBundle:
+      maintenance:
+        maintenanceTitle: Site en cours de maintenance
+        maintenanceText: Nous reviendrons bientôt. Désolé pour le dérangement.
+      error:
+        title500: Erreur 500
+        error500: Erreur interne du serveur, veuillez réessayer plus tard.
+      error400:
+        title400: Erreur 400
+        error400: La requête HTTP n'a pas pu être comprise par le serveur en raison d'une syntaxe erronée.
+      error403:
+        title403: Erreur 403
+        error403: Interdit
+      error404:
+        title404: Erreur 404
+        error404: La page que vous recherchez n'a pas été trouvée.
+common:
+  ajax:
+    modal-error:
+      erreur_data_load: Une erreur s'est produite lors du chargement des données
+  datatable: 
+    actions-content:
+      detail_action: Voir les détails
+      oui: Oui
+      non: Non
+    datatable:
+      actions: Actions
+      detail_produit: Permet de voir le détail d'un produit
+    liste-pagination:
+      pagePrevious: Précédent
+      pageNext: Suivant
+  items-per-page:
+    resultats_par_page: "{{ nbResultPage }} résultats par page"
+emails:
+  password_reset:
+    textMail: "Pour votre demande de réinitialisation de mot de passe, veuillez cliquer sur le lien suivant :"
+    merci: Merci
+  register:
+    textMail1: "Votre inscription sur le site e-commerce est à valider en cliquant sur le lien ci-dessous :"
+    textMail2: Ce lien expirera dans 3 heures
+form:
+  fields:
+    champObligatoire: Ce champ est obligatoire
+include: 
+  _bloc-recherche:
+    placeholderSearchOnCol: Veuillez entrer votre recherche
+    recherche: Rechercher un produit
+    date_du: Du
+    date_au: Au
+  _flash:
+    error: Erreur
+  _selectFilter:
+    select_filtre: Sélectionner un filtre
+  left-aside:
+    espaceClient: Espace client
+    role_admin: Administrateur
+    role_user: Utilisateur
+    menu_home: Accueil
+    menu_translation: Traduction
+    menu_account: Mon compte
+    menu_admin: Administrateur
+    menu_produit1: Produit 1
+    menu_produit2: Produit 2
+    menu_produit3: Produit 3
+  page-header:
+    logout: Se déconnecter
+    login: Me Connecter
+    register: M'inscrire
+  toggle-lang:
+    switch_lang: Switch to English
+metier:
+  admin:
+    users:
+      details:
+        and: et
+        actif: Actif
+        inactif: Inactif
+        info_compte: Informations sur le compte
+        prenom: Prénom
+        nom: Nom
+        lang: Langue
+        email: Adresse email
+        contacter: Contacter
+        modifier: Modifier
+      edit: 
+        annuler: Annuler
+        and: et
+      index:
+        page_title: Administration des utilisateurs
+        detail_user: Permet de voir le détail d'un utilisateur
+        modif_user: Permet de modifier un utilisateur
+        delete_user: Permet de supprimer un utilisateur
+        new_user: + Ajouter un utilisateur
+      newUser: 
+        title: Création d'un compte utilisateur
+        inscrire: Ajouter un utilisateur
+        retour: Annuler
+  product:
+    datatable1:
+      index:
+        page_title: Liste des produits
+        presentation: >-
+          Cette datatable (datatable1) JS charge uniquement les données affichées. </br>
+          Les données sont rechargées à chaque recherche, ordre, changement de page ou changement du nombre d'éléments par page.
+        detail_produit: Permet de voir le détail d'un produit
+        exportXls: Exporter les produits
+    datatable2:
+      index:
+        page_title: Liste des produits
+        presentation: Cette datatable (datatable2) JS charge toutes les données de la BD. </br>
+        detail_produit: Permet de voir le détail d'un produit
+        exportXls: Exporter les produits
+    datatable3:
+      index:
+        page_title: Liste des produits
+        presentation: >-
+          Cette datatable (datatable3) JS charge uniquement les données affichées. </br>
+          La recherche fonctionne avec un formulaire. </br>
+          Les données sont rechargées à chaque validation du formulaire, ordre, changement de page ou changement du nombre d'éléments par page.
+        date_du: Du
+        date_au: Au
+        detail_produit: Permet de voir le détail d'un produit
+        exportXls: Exporter les produits
+    details:
+      title: Détails de  
+  profile:
+    index:
+      title: Votre profile
+      and: et
+      actif: Actif
+      inactif: Inactif
+      info_compte: Informations sur le compte
+      prenom: Prénom
+      nom: Nom
+      lang: Langue
+      email: Adresse email
+      contacter: Contacter
+  public_resources:
+    home:
+      title: Accueil
+      titlePresentation: Ce projet est un kit de démarrage Symfony (Symfony 6.2 et PHP 8.1).
+      presentation: >-
+        Le projet contient : </br>
+        - Un système de traduction</br>
+        - Une installation SonarQube</br>
+        - Une zone administration (Une commande symfony permet la création d'un administrateur)</br>
+        - La création des comptes USER (Avec mécanisme d'oublie de MDP)</br>
+        - Trois exemples de datatable (Produit1, Produit2, Produit3)</br>
+        - Un service d'envoi d'email (Configuration du mailer nécessaire)</br>
+        - Une gestion des tokens JWT</br>
+        - Un template SmartAdmin</br>
+        - Un module de maintenance</br>
+        - Des pages erreurs 403, 404, 500... </br>
+        - Une documentation et un dump de la BDD (Le MDP des USER et des ADMIN du dump est : testtest)</br>
+    demoTranslation:
+      title: Traductions
+      traduction: Traductions
+      testLimace: "Test d'injection en FR, voici le texte injecté : {{ slug }}"
+      traductionMois: Traductions des Mois
+registration:
+  register:
+    title: Inscription
+    inscrire: M'inscrire
+    connecter: Me connecter
+security:
+  login:
+    connexion: Connection
+    text1: Vous êtes connecté en tant que
+    text2: Veuillez vous inscrire
+    email: Email
+    pwd: Mot de passe
+    deconnecter: Se déconnecter 
+    connecter: Se connecter
+    pwd_oublie: Mot de passe oublié
+  reset_password_request:
+    title: Réinitialisation de mot de passe
+    mail_reset_pwd: Nous vous enverrons un e-mail vous permettant de réinitialiser votre mot de passe.
+    reset_pwd: Réinitialiser le mot de passe
+    retour_connexion: Revenir à la connexion
+  reset_password:
+    title: Réinitialisation de mot de passe
+    reset_pwd: Réinitialiser le mot de passe

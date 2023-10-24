@@ -1,0 +1,50 @@
+version: "3"
+services:
+    books_symfony:
+        container_name: books
+        image: eurelis/ubuntu-php8:php81
+        working_dir: /var/www/html
+        links:
+            - "mysql:database"
+        volumes:
+            - ./config/books_symfony.conf:/etc/apache2/sites-enabled/books_symfony.conf
+            - ./config/hosts:/etc/hosts
+            - ../../app:/var/www/html/app
+            - ../../etc:/mnt
+        ports:
+            - 80:80
+            - 443:443
+
+    mysql:
+        image: mysql:8
+        container_name: mysql
+        ports:
+            - 3306:3306
+        volumes:
+            - ./runtime/mysql:/var/lib/mysql
+            - ./runtime/mysqldump:/home
+        env_file:
+            - books.env
+
+    ###> symfony/mailer mailhog ###
+    mailhog:
+        image: mailhog/mailhog:latest
+        container_name: mailhog
+        restart: always
+        ports:
+            - 1025:1025
+            - 8025:8025
+    ###> symfony/mailer mailhog ###
+
+    books_smartadmin:
+        container_name: books_smartadmin
+        image: eurelis/ubuntu-php8:php81
+        working_dir: /var/www/html
+        volumes:
+            - ./config/books_smartadmin.conf:/etc/apache2/sites-enabled/books_smartadmin.conf
+            - ./config/hosts:/etc/hosts
+            - ../../etc/smartadmin/dist:/var/www/html/app
+            - ../../etc:/mnt
+        # ports:
+            # - 80:80
+            # - 443:443

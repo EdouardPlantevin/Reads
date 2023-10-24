@@ -1,0 +1,195 @@
+base:
+  base-neutre:
+    title: Welcome !
+  base-error:
+    back_dash_board: Back to dashboard
+  base-email:
+    intro: Welcome
+    goodbye: See you soon,
+    signature: Eurelis's team.
+  base:
+    welcome: Welcome !
+    loading: Loading...
+    compte_non_active: <strong>Your account is not activated</strong>, you received an activation link on your email
+bundles:
+  TwigBundle:
+    ArtgrisMaintenanceBundle:
+      maintenance:
+        maintenanceTitle: Site under maintenance
+        maintenanceText: We will be back soon. Sorry for the inconvenience.
+    Exception:
+      error:
+        title500: Error 500
+        error500: Internal server error, please try again later.
+      error400:
+        title400: Error 400
+        error400: The HTTP request could not be understood by the server due to incorrect syntax.
+      error403:
+        title403: Error 403
+        error403: Forbidden
+      error404:
+        title404: Error 404
+        error404: The page you are looking for was not found.
+common:
+  datatable: 
+    actions-content:
+      detail_action: See details
+      oui: "Yes"
+      non: "No"
+    datatable:
+      actions: Actions
+      detail_produit: Allows you to see the details of a product
+    liste-pagination:
+      pagePrevious: Previous
+      pageNext: Next
+  items-per-page:
+    resultats_par_page: "{{ nbResultPage }} results per page"
+emails:
+  password_reset:
+    textMail: "For your password reset request, please click on the following link:"
+    merci: Thank you
+  register:
+    textMail1: "Your registration on the e-commerce site is to be validated by clicking on the link below:"
+    textMail2: This link will expire in 3 hours
+form:
+  fields:
+    champObligatoire: This field is required
+include: 
+  _bloc-recherche:
+    placeholderSearchOnCol: Please enter your search
+    recherche: Search for a product
+    date_du: From
+    date_au: to
+  _flash:
+    error: Error
+  _selectFilter:
+    select_filtre: Select a filter
+  left-aside:
+    espaceClient: Customer space
+    role_admin: Administrator
+    role_user: User
+    menu_home: Home
+    menu_translation: Translation
+    menu_account: My account
+    menu_admin: Administrator
+    menu_produit1: Product 1
+    menu_produit2: Product 2
+    menu_produit3: Product 3
+  page-header:
+    logout: Log out
+    login: Login
+    register: Register
+  toggle-lang:
+    switch_lang: Revenir au français
+metier:
+  admin:
+      users:
+        details:
+          and: and
+          actif: Active
+          inactif: Inactive
+          info_compte: Account information
+          prenom: Firstname
+          nom: Last name
+          lang: Language
+          email: Email address
+          contacter: Contact
+          modifier: Edit
+        edit: 
+          annuler: Cancel
+          and: and
+        index:
+          page_title: User administration
+          detail_user: Allows you to see the details of a user
+          modif_user: Allows you to modify a user
+          delete_user: Allows you to delete a user
+          new_user: + Add a user
+        newUser: 
+          title: Create a user account
+          inscrire: Add a user account
+          retour: Cancel
+  product:
+    datatable1:
+      index:
+        page_title: List of products
+        presentation: >-
+          This JS datatable (datatable1) only loads the displayed data. </br> 
+          The data is reloaded each time you search, order, change the page or change the number of items per page.
+        detail_produit: Allows you to see the details of a product
+        exportXls: Export products
+    datatable2:
+      index:
+        page_title: List of products
+        presentation: This JS datatable (datatable2) loads all the data from the database.
+        detail_produit: Allows you to see the details of a product
+        exportXls: Export products
+    datatable3:
+      index:
+        page_title: List of products
+        presentation: >-
+          This JS datatable (datatable3) only loads the displayed data.</br> 
+          The search works with a form.</br>
+          The data is reloaded each time the form is validated, the order is changed, the page is changed, or the number of items per page is changed.</br>
+        date_du: From
+        date_au: to
+        detail_produit: Allows you to see the details of a product
+        exportXls: Export products
+    details:
+      title: Details of  
+  profile:
+    index:
+      title: Your profile
+      and: and
+      actif: Active
+      inactif: Inactive
+      info_compte: Account information
+      prenom: Firstname
+      nom: Last name
+      lang: Language
+      email: Email address
+      contacter: Contact
+  public_resources:
+    home:
+      title: Home
+      titlePresentation: This project is a Symfony starter kit (Symfony 6.2 and PHP 8.1).
+      presentation: >-
+        The project contains: </br>
+        - A translation system</br>
+        - A SonarQube installation</br>
+        - An administration area (A symfony command allows the creation of an administrator)</br>
+        - The creation of USER accounts (With MDP forget mechanism)</br>
+        - Three datatable examples (Product1, Product2, Product3)</br>
+        - An email sending service (Mailer configuration required)</br>
+        - A management of JWT tokens</br>
+        - A SmartAdmin template</br>
+        - A maintenance module</br>
+        - Error pages 403, 404, 500...</br>
+        - A documentation and a dump of the DB (The MDP of the USER and ADMIN of the dump is : testtest)</br>
+    demoTranslation:
+      title: Translations
+      traduction: Translations
+      testLimace: "Test injection in EN translation, here is the injected text: {{ slug }}"
+      traductionMois: Translations of the Month
+registration:
+  register:
+    title: Registration
+    inscrire: Register me
+    connecter: Login
+security:
+  login:
+    connexion: Connection
+    text1: You are logged in as
+    text2: Please register
+    email: Email
+    pwd: Password
+    deconnecter: Log out
+    connecter: Login
+    pwd_oublie: Forgot your password
+  reset_password_request:
+    title: Password Reset
+    mail_reset_pwd: We will send you an email allowing you to reset your password.
+    reset_pwd: Reset password
+    retour_connexion: Back to the connection
+  reset_password:
+    title: Password Reset
+    reset_pwd: Reset password

@@ -1,0 +1,55 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    form_themes:
+        - 'bootstrap_4_layout.html.twig'
+        - 'form/fields.html.twig'
+    globals:
+        default_pagination_choice: 50
+        pagination_choices:
+            - 10
+            - 25
+            - 50
+            - 75
+            - 100
+            
+        icone:
+            dashboard: 'fa fa-home-alt'
+            lang: 'fal fa-language'
+            user: 'ni ni-user'
+            product: 'fal fa-shopping-basket'
+            admin: 'ni ni-settings'
+            list: 'ni ni-list'
+        menu:
+            home:
+                role: 'ROLE_UTILISATEUR'
+                items:
+                    - { path: 'home', label: 'menu_home', icone: 'dashboard' }
+            demo_traduction:
+                role: 'ROLE_UTILISATEUR'
+                items:
+                    - { path: 'demo_traduction', label: 'menu_translation', icone: 'lang' }
+            profile:
+                role: 'ROLE_UTILISATEUR'
+                items:
+                    - { path: 'profile_index', label: 'menu_account', icone: 'user' }
+            admin:
+                role: 'ROLE_ADMIN'
+                items:
+                    - { path: 'admin_users_index', label: 'menu_admin', icone: 'admin' }
+            datatable1:
+                role: 'ROLE_UTILISATEUR'
+                items:
+                    - { path: 'product_datatable1', label: 'menu_produit1', icone: 'product' }
+            datatable2:
+                role: 'ROLE_UTILISATEUR'
+                items:
+                    - { path: 'product_datatable2', label: 'menu_produit2', icone: 'product' }
+            datatable3:
+                role: 'ROLE_UTILISATEUR'
+                items:
+                    - { path: 'product_datatable3', label: 'menu_produit3', icone: 'product' }
+
+                    
+when@test:
+    twig:
+        strict_variables: true
