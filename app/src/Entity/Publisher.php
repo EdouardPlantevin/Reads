@@ -21,6 +21,11 @@ class Publisher
         $this->books = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->getName();
+    }
+
     /**
      * @return Collection<int, Book>
      */
